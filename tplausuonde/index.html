@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lẩu sườn dê</title>
+    <link rel="icon" type="image/png" href="../assets/images/logo-tp.png" />
+    <link rel="stylesheet" href="../assets/style.css" />
+  </head>
+  <body>
+    <div class="product-section">
+      <div class="product-hero">
+        <h1 class="product-title">LẨU SƯỜN DÊ</h1>
+        <p class="product-desc">
+          "Hương vị truyền thống đậm đà<br />tiện lợi mọi lúc mọi nơi"
+        </p>
+        <div class="product-prices">
+          <div class="product-price-box">
+            <div class="product-size">Size M : 3kg</div>
+            <div class="product-old-price">680.000 vnđ</div>
+            <div class="product-new-price">499.000</div>
+          </div>
+          <div class="product-price-box">
+            <div class="product-size">Size L : 3.5kg</div>
+            <div class="product-old-price">850.000 vnđ</div>
+            <div class="product-new-price">699.000</div>
+          </div>
+        </div>
+        <!-- Section: Bộ đếm thời gian ngược -->
+        <div class="count-down"></div>
+        <button class="order-btn">ĐẶT HÀNG NGAY</button>
+        <div class="product-image-wrap">
+          <img
+            src="../assets/images/lausuonde.png"
+            alt="Lẩu sườn dê"
+            class="product-image"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- Section: Hộp sản phẩm và mô tả nhanh -->
+    <!-- <section class="intro-section">
+      <div class="intro-img-wrap">
+        <img src="../assets/images/hop.png" alt="Hộp lẩu sườn dê" class="intro-img" />
+      </div>
+      <ul class="intro-features">
+        <li><span class="dot"></span><b>HƯƠNG VỊ:</b><br>Đậm đà, truyền thống, chuẩn vị lẩu dê</li>
+        <li><span class="dot"></span><b>ĐÓNG GÓI TIỆN LỢI:</b><br>Sẵn sàng sử dụng mọi lúc, mọi nơi.</li>
+        <li><span class="dot"></span><b>SẴN SÀNG TỤ HỘI</b><br>Thích hợp cho các buổi sum họp gia đình, bạn bè, tiệc tùng</li>
+        <li><span class="dot"></span><b>BẢO QUẢN DỄ DÀNG:</b><br>Bảo quản lâu, dễ dàng mang đi.</li>
+      </ul>
+    </section> -->
+
+    <div class="container">
+      <form id="form">
+        <input name="name" placeholder="Họ và tên" required />
+        <input name="phone" type="tel" placeholder="Số điện thoại" required />
+        <div class="order-sizes" style="margin-bottom: 8px; color: black">
+          <div style="align-items: center">
+            <label
+              style="
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                justify-content: space-between;
+                margin-bottom: 12px;
+              "
+            >
+              <input
+                type="checkbox"
+                name="sizeM"
+                value="M"
+                style="width: 16px"
+              />
+              <span
+                style="
+                  background: #fffad5;
+                  padding: 0 16px;
+                  height: 48px;
+                  display: flex;
+                  flex: 1;
+                  align-items: center;
+                  border-radius: 6px;
+                "
+                >Size M : 499.000đ + 30k ship</span
+              >
+              <input
+                name="mQuantity"
+                type="number"
+                min="0"
+                placeholder="Số lượng"
+                style="width: 120px; margin-bottom: 0; height: 48px"
+              />
+            </label>
+          </div>
+          <div>
+            <label
+              style="
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                justify-content: space-between;
+                margin-bottom: 12px;
+              "
+            >
+              <input
+                type="checkbox"
+                name="sizeL"
+                value="L"
+                style="width: 16px"
+              />
+              <span
+                style="
+                  background: #fffad5;
+                  padding: 0 16px;
+                  width: auto;
+                  height: 48px;
+                  display: flex;
+                  flex: 1;
+                  align-items: center;
+                  border-radius: 6px;
+                "
+              >
+                Size L : 699.000đ (Free ship)
+              </span>
+              <input
+                name="lQuantity"
+                type="number"
+                min="0"
+                placeholder="Số lượng"
+                style="width: 120px; margin-bottom: 0; height: 48px"
+              />
+            </label>
+          </div>
+        </div>
+        <input name="address" placeholder="Địa chỉ nhận hàng" />
+        <textarea
+          name="note"
+          class="note"
+          placeholder="Ghi chú (Không bắt buộc)"
+        ></textarea>
+        <button type="submit">Đặt ngay</button>
+      </form>
+      <!-- <p class="message"></p> -->
+    </div>
+    <!-- Section: Nhúng video -->
+    <section class="video-section">
+      <h3 class="video-title">KHÁM PHÁ LẨU SƯỜN DÊ TP FOODS</h3>
+      <div class="video-wrap">
+        <iframe
+          width="100%"
+          height="100%"
+          src="../assets/images/video.mp4"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </section>
+
+    <!-- Section: Bình luận -->
+    <section class="comments-section">
+      <h3 class="comments-title">Tất cả bình luận</h3>
+      <div class="comments-header">
+        <span class="comments-count"><b>17.653 Bình luận</b></span>
+        <!-- <span class="comments-sort">Sắp xếp theo</span>
+      <button class="comments-sort-btn">Hàng đầu <span class="comments-sort-icon">▼</span></button> -->
+      </div>
+      <div class="comment-list">
+        <!-- Bình luận 1 -->
+        <div class="comment-item">
+          <div class="comment-user">
+            <img
+              class="comment-avatar"
+              src="../assets/images/avt1.png"
+              alt="avatar"
+            />
+            <div>
+              <span class="comment-name"><b>Mukbang Văn Phòng</b></span>
+              <div class="comment-text">
+                Review đồ ăn rất nhiều nhưng phải nói đây là lẩu sườn dê đầu
+                tiên mình ăn không bị kiểu hôi, vị dê đặc trưng tươi ngon, nước
+                lẩu dịu.
+              </div>
+              <div class="comment-images">
+                <img src="../assets/images/comment1.png" alt="review-img" />
+                <img src="../assets/images/comment2.png" alt="review-img" />
+              </div>
+              <div class="comment-stars">
+                <img src="../assets/images/star.svg" alt="star" />
+                <img src="../assets/images/star.svg" alt="star" />
+                <img src="../assets/images/star.svg" alt="star" />
+                <img src="../assets/images/star.svg" alt="star" />
+                <img src="../assets/images/star.svg" alt="star" />
+              </div>
+              <div class="comment-actions">
+                <span>Thích - Phản hồi</span>
+                <img
+                  src="../assets/images/like.png"
+                  alt="like"
+                  class="comment-icon"
+                />
+                <span>6</span>
+                <span class="comment-time">56 phút trước</span>
+              </div>
+            </div>
+          </div>
+          <div class="comment-reply">
+            <img
+              class="comment-avatar"
+              src="../assets/images/logo-tp.png"
+              alt="tpfoods"
+            />
+            <div>
+              <span class="comment-name"><b>TP FOODS GROUP</b></span>
+              <div class="comment-text">Cảm ơn bạn ủng hộ shop nhé !</div>
+              <span class="comment-time">Phản hồi 52 phút trước</span>
+            </div>
+          </div>
+        </div>
+        <!-- Bình luận 2 -->
+        <div class="comment-item">
+          <div class="comment-user">
+            <img
+              class="comment-avatar"
+              src="../assets/images/avt2.png"
+              alt="avatar"
+            />
+            <div>
+              <span class="comment-name"><b>Nhung Phạm</b></span>
+              <div class="comment-text">
+                Mình không nghĩ đồ ăn ngon như thế đâu ạ, theo dõi shop từ rất
+                lâu nay mua về 1 set ăn thử ai dè ngon và rẻ quá đi .
+              </div>
+              <div class="comment-images">
+                <img src="../assets/images/comment3.png" alt="review-img" />
+                <img src="../assets/images/comment4.png" alt="review-img" />
+              </div>
+              <div class="comment-stars">
+                <img src="../assets/images/star.svg" alt="star" />
+                <img src="../assets/images/star.svg" alt="star" />
+                <img src="../assets/images/star.svg" alt="star" />
+                <img src="../assets/images/star.svg" alt="star" />
+                <img src="../assets/images/star.svg" alt="star" />
+              </div>
+              <div class="comment-actions">
+                <span>Thích - Phản hồi</span>
+                <img
+                  src="../assets/images/like.png"
+                  alt="like"
+                  class="comment-icon"
+                />
+                <span>6</span>
+                <span class="comment-time">56 phút trước</span>
+              </div>
+            </div>
+          </div>
+          <div class="comment-reply">
+            <img
+              class="comment-avatar"
+              src="../assets/images/logo-tp.png"
+              alt="tpfoods"
+            />
+            <div>
+              <span class="comment-name"><b>TP FOODS GROUP</b></span>
+              <div class="comment-text">Cảm ơn bạn ủng hộ shop nhé !</div>
+              <span class="comment-time">Phản hồi 52 phút trước</span>
+            </div>
+          </div>
+        </div>
+        <!-- Bình luận 3 -->
+        <div class="comment-item">
+          <div class="comment-user">
+            <img
+              class="comment-avatar"
+              src="../assets/images/avt3.png"
+              alt="avatar"
+            />
+            <div>
+              <span class="comment-name"><b>Tùng Anh</b></span>
+              <div class="comment-text">
+                Đã nhận được hàng, thịt tươi ăn có vị thơm rất dịu nhẹ, bố mẹ
+                mình đánh giá 5 sao nha shop Đánh giá 5 sao
+              </div>
+              <div class="comment-images">
+                <img src="../assets/images/comment5.png" alt="review-img" />
+              </div>
+              <div class="comment-stars">
+                <img src="../assets/images/star.svg" alt="star" />
+                <img src="../assets/images/star.svg" alt="star" />
+                <img src="../assets/images/star.svg" alt="star" />
+                <img src="../assets/images/star.svg" alt="star" />
+                <img src="../assets/images/star.svg" alt="star" />
+              </div>
+              <div class="comment-actions">
+                <span>Thích - Phản hồi</span>
+                <img
+                  src="../assets/images/like.png"
+                  alt="like"
+                  class="comment-icon"
+                />
+                <span>2</span>
+                <span class="comment-time">53 phút trước</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Bình luận 4 -->
+        <div class="comment-item">
+          <div class="comment-user">
+            <img
+              class="comment-avatar"
+              src="../assets/images/avt4.png"
+              alt="avatar"
+            />
+            <div>
+              <span class="comment-name"><b>Hoàng Thùy</b></span>
+              <div class="comment-text">
+                Shop đóng gói cẩn thận, giao hàng nhanh, đánh giá rất cao cách
+                đóng gói của brand nha, chỉn chu và rất tiện lợi, đồ ăn rất ngon
+                mà giá lại rẻ nữa cơ
+              </div>
+              <div class="comment-stars">
+                <img src="../assets/images/star.svg" alt="star" />
+                <img src="../assets/images/star.svg" alt="star" />
+                <img src="../assets/images/star.svg" alt="star" />
+                <img src="../assets/images/star.svg" alt="star" />
+                <img src="../assets/images/star.svg" alt="star" />
+              </div>
+              <div class="comment-actions">
+                <span>Thích - Phản hồi</span>
+                <img
+                  src="../assets/images/like.png"
+                  alt="like"
+                  class="comment-icon"
+                />
+                <span>2</span>
+                <span class="comment-time">50 phút trước</span>
+              </div>
+            </div>
+          </div>
+          <div class="comment-reply">
+            <img
+              class="comment-avatar"
+              src="../assets/images/logo-tp.png"
+              alt="tpfoods"
+            />
+            <div>
+              <span class="comment-name"><b>TP FOODS GROUP</b></span>
+              <div class="comment-text">Cảm ơn bạn ủng hộ shop nhé !</div>
+              <span class="comment-time">Phản hồi 52 phút trước</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="comment-input-row">
+        <span class="typing-dots"><span></span><span></span><span></span></span>
+        <i class="comment-text-row" disabled>Ai đó đang nhập bình luận</i>
+      </div>
+    </section>
+
+    <!-- Section: Thành phần, hướng dẫn sử dụng, nồi lẩu -->
+       <section class="detail-section">
+         <div class="detail-content">
+           <h2 class="detail-title" style="color: #ffd966;">LẨU SƯỜN DÊ</h2>
+           <p class="detail-desc">
+             Được chế biến từ thịt dê tươi, kết hợp với nước dùng đặc biệt theo
+             công thức truyền thống.
+           </p>
+           <div class="detail-sizes">
+             <div class="detail-size">
+               <ul>
+                 <li>
+                   <span class="dot yellow"></span>Thịt sườn dê chín
+                 </li>
+                 <li>
+                   <span class="dot yellow"></span>Chả dê đông cô
+                 </li>
+                 <li>
+                   <span class="dot yellow"></span>Nước hầm từ dê
+                 </li>
+                 <li>
+                   <span class="dot yellow"></span>Nước lẩu pha thêm
+                 </li>
+               </ul>
+             </div>
+           </div>
+           <div class="detail-guide">
+             <b>Hướng dẫn sử dụng</b><br />
+             Đun trực tiếp nồi lẩu trên bếp hồng ngoại, bếp gas, bếp cồn và ăn cùng
+             nước chấm kèm theo
+           </div>
+           <div style="height: 200px;"/>
+           <button class="order-btn-2">ĐẶT HÀNG NGAY</button>
+         </div>
+       </section>
+
+    <!-- Section: Chứng nhận & Cam kết chất lượng -->
+    <section class="cert-section">
+      <div class="cert-img-col">
+        <img
+          src="../assets/images/cert.png"
+          alt="Giấy chứng nhận VSATTP"
+          class="cert-img"
+        />
+      </div>
+      <div class="cert-content-col">
+        <h3 class="cert-title">CHỨNG NHẬN VSATTP<br />& CAM KẾT CHẤT LƯỢNG</h3>
+        <div class="cert-desc">
+          TP FOODS tự hào là đơn vị hàng đầu trong lĩnh vực sản xuất thực phẩm
+          từ thịt dê !
+        </div>
+        <div class="cert-badges">
+          <img
+            src="../assets/images/chatluong.png"
+            alt="Chất lượng hoàn hảo"
+            class="cert-badge"
+          />
+          <img
+            src="../assets/images/ship.png"
+            alt="Giao hàng toàn quốc kiểm tra trước khi nhận"
+            class="cert-badge"
+          />
+        </div>
+      </div>
+    </section>
+
+    <script src="../assets/script.js"></script>
+    <script>
+      submitForm("Dương Lẩu Landing");
+
+      // Cuộn xuống form khi click nút order-btn
+      document
+        .querySelector(".order-btn")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          document
+            .getElementById("form")
+            .scrollIntoView({ behavior: "smooth", block: "center" });
+        });
+
+      document
+        .querySelector(".order-btn-2")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          document
+            .getElementById("form")
+            .scrollIntoView({ behavior: "smooth", block: "center" });
+        });
+
+      // Countdown 2 tiếng, hết thì lặp lại
+      function startCountdown(duration, display) {
+        let timer = duration,
+          hours,
+          minutes,
+          seconds;
+        setInterval(function () {
+          hours = Math.floor(timer / 3600);
+          minutes = Math.floor((timer % 3600) / 60);
+          seconds = timer % 60;
+          display.textContent =
+            "GIÁ ÁP DỤNG TRONG: " +
+            String(hours).padStart(2, "0") +
+            ":" +
+            String(minutes).padStart(2, "0") +
+            ":" +
+            String(seconds).padStart(2, "0");
+          if (--timer < 0) {
+            timer = duration;
+          }
+        }, 1000);
+      }
+      window.addEventListener("DOMContentLoaded", function () {
+        var twoHours = 0.56 * 60 * 60;
+        var display = document.querySelector(".count-down");
+        if (display) startCountdown(twoHours, display);
+      });
+    </script>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <h3 style="margin-top: 0">TP FOODS GROUP</h3>
+        <ul class="footer-info">
+          <li>
+            <span class="footer-icon home"></span> Địa chỉ: Ngõ 3 Phương Bảng,
+            Song Phương, Hoài Đức, HN
+          </li>
+          <li><span class="footer-icon phone"></span> Hotline: 0983-725-116</li>
+          <li>
+            <span class="footer-icon email"></span> Email:
+            thucphamtpfoods@gmail.com
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
