@@ -21,7 +21,7 @@ function showToast(msg, color = 'green') {
     setTimeout(() => toast.remove(), 500);
   }, 2200);
 }
-const API_URL = "https://script.google.com/macros/s/AKfycbyZlZRZJ_gE4TCJhjch1hrzPb18xlZsgeIoc7LszMNwhcvNET8eDDUt4slUqm7CftcFGw/exec";
+const API_URL = "https://script.google.com/macros/s/AKfycbytEJ8JOMXozK_NsHCNOZD94FhC9irVDUX6b2gMue-4UADNbjDSbYAaQ885chh65D2pjQ/exec";
 
 async function submitForm(product) {
     // Sync checkbox and quantity logic for size M and L (run immediately, not just on submit)
