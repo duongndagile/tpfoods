@@ -41,22 +41,23 @@
 }
 .detail-section .order-btn-2 {
   width: calc(100% - 64px);
-  margin-bottom: 16px;
   background: #b71c1c;
   color: #fff;
   font-size: 20px;
   font-weight: bold;
-  border: none;
+  border: 2px solid #ffd966;
   border-radius: 8px;
-  /* padding: 12px 48px; */
+  padding: 12px 48px;
+  margin: 16px;
   cursor: pointer;
   box-shadow: 0 2px 8px #0004;
   letter-spacing: 2px;
   transition: background 0.2s;
   position: absolute;
-  left: 50%;
+  left: 4%;
   transform: translateX(-50%);
   bottom: 0;
+  animation: zoom-in-out 1s ease-in-out infinite;
 }
 @media (max-width: 900px) {
   .detail-section {
@@ -275,6 +276,32 @@
 .video-wrap {
   width: 100%;
   height: 250px;
+}
+
+.img-wrap {
+  display: flex;
+  height: 190px;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 16px;
+}
+.img-wrap .img-1 {
+  background: url('../assets/images/anh1.png') no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+.img-wrap .img-2 {
+  background: url('../assets/images/anh2.png') no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+.img-wrap .img-3 {
+  background: url('../assets/images/anh3.png') no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
 }
 
 /* --- Section: Chứng nhận & Cam kết chất lượng --- */
@@ -656,6 +683,7 @@ button:disabled {
       box-shadow: 0 2px 8px #0004;
       letter-spacing: 2px;
       transition: background 0.2s;
+      animation: zoom-in-out 1s ease-in-out infinite;
     }
   }
   background: #000;
@@ -663,6 +691,17 @@ button:disabled {
   padding: 32px 0 0 0;
   max-width: 420px;
   margin: 0 auto;
+}
+@keyframes zoom-in-out {
+    0% {
+        transform: scale(1); /* Kích thước gốc */
+    }
+    50% {
+        transform: scale(1.15); /* Phóng to lên 1.15 lần (lúc 1.5 giây) */
+    }
+    100% {
+        transform: scale(1); /* Trở về kích thước gốc (lúc 3 giây) */
+    }
 }
 .product-hero {
   max-width: 520px;
@@ -729,9 +768,9 @@ button:disabled {
   width: calc(100% - 64px);
   background: #b71c1c;
   color: #fff;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
-  border: none;
+  border: 2px solid #ffd966;
   border-radius: 8px;
   padding: 12px 48px;
   margin: 16px;
@@ -740,6 +779,7 @@ button:disabled {
   letter-spacing: 2px;
   transition: background 0.2s;
   position: relative;
+  animation: zoom-in-out 1s ease-in-out infinite;
 }
 .order-btn:hover {
   background: #d32f2f;
