@@ -20,17 +20,22 @@
             <div class="product-old-price">3.850.000 vnđ</div>
             <div class="product-new-price">2.599.000</div>
           </div>
+          <div class="product-price-box">
+            <div class="product-size">Size M : 1.4-1.6kg</div>
+            <div class="product-old-price">3.550.000 vnđ</div>
+            <div class="product-new-price">2.399.000</div>
+          </div>
         </div>
-        <div class="product-prices">
+        <div class="product-prices" style="gap: 8px">
           <div class="product-price-box">
             <div class="product-size">Size S : 1.1-1.3kg</div>
             <div class="product-old-price">3.250.000 vnđ</div>
             <div class="product-new-price">2.199.000</div>
           </div>
           <div class="product-price-box">
-            <div class="product-size">Size M : 1.4-1.6kg</div>
-            <div class="product-old-price">3.550.000 vnđ</div>
-            <div class="product-new-price">2.399.000</div>
+            <div class="product-size">Size XS : 0.8-1.1kg</div>
+            <div class="product-old-price">2.650.000 vnđ</div>
+            <div class="product-new-price">1.950.000</div>
           </div>
         </div>
         <!-- Section: Bộ đếm thời gian ngược -->
@@ -98,6 +103,43 @@
         <input name="name" placeholder="Họ và tên" required />
         <input name="phone" type="tel" placeholder="Số điện thoại" required />
         <div class="order-sizes" style="margin-bottom: 8px; color: black">
+          <div style="align-items: center">
+            <label
+              style="
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                justify-content: space-between;
+                margin-bottom: 12px;
+              "
+            >
+              <input
+                type="checkbox"
+                name="sizeXs"
+                value="XS"
+                style="width: 16px"
+              />
+              <span
+                style="
+                  background: #fffad5;
+                  padding: 0 16px;
+                  height: 48px;
+                  display: flex;
+                  flex: 1;
+                  align-items: center;
+                  border-radius: 6px;
+                "
+                >Size XS : 1.950.000 vnđ</span
+              >
+              <input
+                name="xsQuantity"
+                type="number"
+                min="0"
+                placeholder="Số lượng"
+                style="width: 120px; margin-bottom: 0; height: 48px"
+              />
+            </label>
+          </div>
           <div style="align-items: center">
             <label
               style="

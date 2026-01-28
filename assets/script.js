@@ -21,17 +21,35 @@ function showToast(msg, color = 'green') {
     setTimeout(() => toast.remove(), 500);
   }, 2200);
 }
-const API_URL = "https://script.google.com/macros/s/AKfycbytEJ8JOMXozK_NsHCNOZD94FhC9irVDUX6b2gMue-4UADNbjDSbYAaQ885chh65D2pjQ/exec";
+const API_URL = "https://script.google.com/macros/s/AKfycby5_NQFPfOCFT5RlDTN08zi7mTLpifUVwXVCCgeAKH6-Sqb7rtd1sBe8Qq4wt2u9Clazw/exec";
 
 async function submitForm(product) {
     // Sync checkbox and quantity logic for size M and L (run immediately, not just on submit)
     function setupSizeQuantitySync() {
+      const xsCheckbox = form.sizeXs;
       const sCheckbox = form.sizeS;
       const mCheckbox = form.sizeM;
       const lCheckbox = form.sizeL;
+      const xsQuantity = form.xsQuantity;
       const sQuantity = form.sQuantity;
       const mQuantity = form.mQuantity;
       const lQuantity = form.lQuantity;
+      if (xsCheckbox && xsQuantity) {
+        xsCheckbox.addEventListener('change', function() {
+          if (xsCheckbox.checked) {
+            if (!xsQuantity.value || parseInt(xsQuantity.value, 10) < 1) xsQuantity.value = 1;
+          } else {
+            xsQuantity.value = '';
+          }
+        });
+        xsQuantity.addEventListener('input', function() {
+          if (parseInt(xsQuantity.value, 10) > 0) {
+            xsCheckbox.checked = true;
+          } else {
+            xsCheckbox.checked = false;
+          }
+        });
+      }
       if (sCheckbox && sQuantity) {
         sCheckbox.addEventListener('change', function() {
           if (sCheckbox.checked) {
@@ -106,15 +124,18 @@ async function submitForm(product) {
     const note = form.note.value.trim();
 
     // Handle new size/quantity fields
+    const sizeXsChecked = form.sizeXs && form.sizeXs.checked;
     const sizeSChecked = form.sizeS && form.sizeS.checked;
     const sizeMChecked = form.sizeM && form.sizeM.checked;
     const sizeLChecked = form.sizeL && form.sizeL.checked;
+    const xsQuantity = form.xsQuantity ? parseInt(form.xsQuantity.value, 10) || 0 : 0;
     const sQuantity = form.sQuantity ? parseInt(form.sQuantity.value, 10) || 0 : 0;
     const mQuantity = form.mQuantity ? parseInt(form.mQuantity.value, 10) || 0 : 0;
     const lQuantity = form.lQuantity ? parseInt(form.lQuantity.value, 10) || 0 : 0;
 
     // Build order details
     let sizes = [];
+    if (sizeXsChecked && xsQuantity > 0) sizes.push({ size: 'XS', quantity: xsQuantity });
     if (sizeSChecked && sQuantity > 0) sizes.push({ size: 'S', quantity: sQuantity });
     if (sizeMChecked && mQuantity > 0) sizes.push({ size: 'M', quantity: mQuantity });
     if (sizeLChecked && lQuantity > 0) sizes.push({ size: 'L', quantity: lQuantity });
